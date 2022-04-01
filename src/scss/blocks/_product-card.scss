@@ -1,0 +1,168 @@
+.product-card {
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  display: flex;
+  margin: 20px 0;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-areas:
+      "image main-info close-button"
+      "secondary-info secondary-info secondary-info";
+    grid-template-columns: 87px auto 54px;
+  }
+
+  &__image {
+    margin: 22px 40px 23px 20px;
+    width: 100px;
+    height: 75px;
+    grid-area: image;
+
+    @media screen and (max-width: 768px) {
+      width: 67px;
+      height: 50px;
+      margin: 15px;
+    }
+  }
+
+  &__info {
+    flex-grow: 1;
+    margin: 25px 0;
+  }
+
+  &__close-button {
+    margin-left: 20px;
+    font-family: inherit;
+    grid-area: close-button;
+
+    @media screen and (max-width: 768px) {
+      background: none;
+      align-self: start;
+      margin-top: 18px;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  &__main-info {
+    display: flex;
+    justify-content: space-between;
+    grid-area: main-info;
+
+    @media screen and (max-width: 768px) {
+      display: grid;
+      grid-template-areas:
+        "name name"
+        "number price";
+      grid-template-rows: repeat(2, 1fr);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 15px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__sales {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__percent {
+    padding-right: 7px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__sale {
+    padding-right: 18px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__old-price {
+    padding-right: 15px;
+    text-decoration: line-through;
+    color: #cccccc;
+  }
+
+  &__secondary-info {
+    display: flex;
+    flex-basis: 499px;
+    gap: 1;
+    margin: 20px 0;
+    grid-area: secondary-info;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+
+  &__color {
+    display: flex;
+  }
+
+  &__count {
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__sizes {
+    display: flex;
+  }
+
+  &__term {
+    padding-right: 10px;
+    grid-area: term;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__description {
+    margin-right: 15px;
+    font-weight: 400;
+    color: #9e9e9e;
+    grid-area: description;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__svg {
+    margin-right: 15px;
+    width: 11px;
+    height: 11px;
+    grid-area: color;
+  }
+}
+
+#product-card__number {
+  display: none;
+  grid-area: number;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    width: 37px; //*размер побольше, тк цифры не влазили
+    height: 20px;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    border-radius: 7px;
+  }
+}

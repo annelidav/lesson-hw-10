@@ -1,0 +1,38 @@
+.button {
+  background: #245462;
+  border: none;
+  padding: 13px 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #377c91;
+  }
+
+  &:active {
+    background: #224550;
+    box-shadow: 2px #375b66;
+  }
+}
+
+.close-button {
+  border: none;
+  color: #c9c9c9;
+  background: #f9f9f9;
+  padding: 0 11px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+
+  &:active {
+    background: #dce5e7;
+    box-shadow: 2px #dcdedf;
+  }
+}

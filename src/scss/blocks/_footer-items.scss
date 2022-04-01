@@ -1,0 +1,43 @@
+.footer-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 24px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__cost {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      margin: 31px 53px 32px 52px;
+    }
+  }
+
+  &__result {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__price {
+    padding-left: 15px;
+    padding-right: 25px;
+    font-size: 16px;
+    line-height: 19px;
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+    }
+  }
+
+  &__button {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
